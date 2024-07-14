@@ -1,0 +1,166 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/*  SIDEBAR   */
+.side-bar {
+  width: 320px;
+  left: -250px;
+  z-index: 999999;
+}
+.side-bar .black-side {
+  width: 250px;
+}
+
+.side-bar .links a {
+  color: #f9f6f6;
+  position: relative;
+  top: 200px;
+}
+.side-bar .black-side .footer {
+  padding: 10px;
+  color: #f9f6f6;
+}
+.side-bar .white-side {
+  width: 70px;
+  background-color: #fff;
+}
+
+#closeBtn {
+  display: none;
+}
+#closeBtn,
+#openBtn {
+  font-size: 35px;
+}
+
+.side-bar .white-side i {
+  font-size: 20px;
+}
+
+/*  SIDEBAR   */
+/*  HOME   */
+.home .item .inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.home .item .layer {
+  position: absolute;
+  top: 101%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.603);
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  color: #000;
+  transition: top 0.5s;
+}
+.home .item:hover .layer {
+  top: 0;
+}
+/*  HOME   */
+
+/* SEARCH */
+#searchSection {
+  opacity: 0;
+  z-index: 99999;
+}
+.search-inputs input,
+.search-inputs input::placeholder {
+  color: #f9f6f6 !important;
+}
+/* SEARCH */
+
+/* LOADING SCREEN */
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.651);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 10px dotted #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* LOADING SCREEN */
+
+/* DETAILS */
+.details-row .image-col img {
+  border-radius: 10px;
+}
+.details-row .badge {
+  background-color: #cff4fc !important;
+  color: #055160 !important;
+  font-size: 17px;
+}
+/* DETAILS */
+
+/* AREA */
+.area,
+.ingredients {
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  height: 210px;
+}
+.area i,
+.ingredients i {
+  font-size: 75px;
+  color: #f9f6f6;
+  margin-block: 10px;
+}
+/* AREA */
+
+/* Conatct */
+
+@media (max-width: 720px) {
+  .container {
+    width: 70% !important;
+    margin: 0 auto !important;
+  }
+}
+/* Conatct */
