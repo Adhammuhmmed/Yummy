@@ -2,12 +2,7 @@
 const closeBtn = document.getElementById("closeBtn");
 const openBtn = document.getElementById("openBtn");
 const loading = document.querySelector(".loading");
-const nameInput = document.getElementById("nameInput");
-const emailInput = document.getElementById("emailInput");
-const phoneInput = document.getElementById("phoneInput");
-const ageInput = document.getElementById("ageInput");
-const passwordInput = document.getElementById("passwordInput");
-const rePasswordInput = document.getElementById("rePasswordInput");
+let inputs = document.querySelectorAll(".home input");
 const rowData = document.getElementById("rowData");
 const searchName = document.getElementById("searchName");
 const searchLetter = document.getElementById("searchLetter");
@@ -166,11 +161,14 @@ function displayCategory(array) {
   rowData.innerHTML = box;
 }
 async function categorMeal(category) {
+  loading.classList.remove("d-none");
   const api = await fetch(
     `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
   );
   const response = await api.json();
   const responsMeals = response.meals;
+  loading.classList.add("d-none");
+
   displayCategoryMeals(responsMeals);
 }
 function displayCategoryMeals(array) {
@@ -373,24 +371,13 @@ document.getElementById("contactLink").addEventListener("click", () => {
   document.getElementById("form").classList.remove("d-none");
   loading.classList.add("d-none");
 });
-nameInput.addEventListener("input", () => {
-  submit();
+
+inputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    submit();
+  });
 });
-emailInput.addEventListener("input", () => {
-  submit();
-});
-phoneInput.addEventListener("input", () => {
-  submit();
-});
-ageInput.addEventListener("input", () => {
-  submit();
-});
-passwordInput.addEventListener("input", () => {
-  submit();
-});
-rePasswordInput.addEventListener("input", () => {
-  submit();
-});
+
 // ! =============> VALIDTION ===============>
 function submit() {
   const submitBtn = document.getElementById("submitBtn");
