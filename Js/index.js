@@ -58,6 +58,10 @@ function displayHomeData(responseMeals) {
 
 // ! =============> SEARCH ===============>
 document.getElementById("searchLink").addEventListener("click", () => {
+  $(".side-bar").animate({ left: "-250px" }, 500);
+  $(".links a").animate({ top: "200px" }, 250);
+  $(openBtn).show(0);
+  $(closeBtn).hide(0);
   $("#searchSection").css({ opacity: "1" });
   $(".search-input").css({ display: "flex" });
   $("#rowData").css({ opacity: "0" });
@@ -128,6 +132,10 @@ function dispalySearchLetter(array) {
 
 //  =============> CATEGORY ===============>
 document.getElementById("categoryLink").addEventListener("click", () => {
+  $(".side-bar").animate({ left: "-250px" }, 500);
+  $(".links a").animate({ top: "200px" }, 250);
+  $(openBtn).show(0);
+  $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
   $("#searchSection").css({ opacity: "0" });
   document.getElementById("form").classList.add("d-none");
@@ -190,6 +198,10 @@ function displayCategoryMeals(array) {
 
 // ! =============> DETAILS ===============>
 async function details(itemId) {
+  $(".side-bar").animate({ left: "-250px" }, 500);
+  $(".links a").animate({ top: "200px" }, 250);
+  $(openBtn).show(0);
+  $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
   $("#searchSection").css({ opacity: "0" });
   document.getElementById("form").classList.add("d-none");
@@ -242,6 +254,10 @@ function displayDetails(array) {
 
 //  =============> AREA ===============>
 document.getElementById("areaLink").addEventListener("click", () => {
+  $(".side-bar").animate({ left: "-250px" }, 500);
+  $(".links a").animate({ top: "200px" }, 250);
+  $(openBtn).show(0);
+  $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
   $("#searchSection").css({ opacity: "0" });
   document.getElementById("form").classList.add("d-none");
@@ -304,6 +320,10 @@ function displayOnlyAreaMeals(array) {
 
 // ! =============> INGRRDIENT ===============>
 document.getElementById("ingredientLink").addEventListener("click", () => {
+  $(".side-bar").animate({ left: "-250px" }, 500);
+  $(".links a").animate({ top: "200px" }, 250);
+  $(openBtn).show(0);
+  $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
   $("#searchSection").css({ opacity: "0" });
   document.getElementById("form").classList.add("d-none");
@@ -364,6 +384,10 @@ function displayIngredientsMeals(array) {
 
 //  =============> CONTACT ===============>
 document.getElementById("contactLink").addEventListener("click", () => {
+  $(".side-bar").animate({ left: "-250px" }, 500);
+  $(".links a").animate({ top: "200px" }, 250);
+  $(openBtn).show(0);
+  $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
   $(".search-input").css({ display: "none" });
   // $("#form").css({ display: "flex" });
