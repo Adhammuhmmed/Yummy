@@ -7,14 +7,15 @@ const rowData = document.getElementById("rowData");
 const searchName = document.getElementById("searchName");
 const searchLetter = document.getElementById("searchLetter");
 homeData();
+
 // SIDEBAR
-closeBtn.addEventListener("click", () => {
+function closeSide() {
   $(".side-bar").animate({ left: "-250px" }, 500);
   $(".links a").animate({ top: "200px" }, 250);
   $(openBtn).show(0);
   $(closeBtn).hide(0);
-});
-openBtn.addEventListener("click", () => {
+}
+function openSide() {
   $(".side-bar").animate({ left: "0" }, 500, function () {
     for (let i = 0; i < 5; i++) {
       $(".links a")
@@ -24,6 +25,13 @@ openBtn.addEventListener("click", () => {
   });
   $(openBtn).hide(0);
   $(closeBtn).show(0);
+}
+
+closeBtn.addEventListener("click", () => {
+  closeSide();
+});
+openBtn.addEventListener("click", () => {
+  openSide();
 });
 // SIDEBAR
 // ? =============> Global ===============>
@@ -58,10 +66,9 @@ function displayHomeData(responseMeals) {
 
 // ! =============> SEARCH ===============>
 document.getElementById("searchLink").addEventListener("click", () => {
-  $(".side-bar").animate({ left: "-250px" }, 500);
-  $(".links a").animate({ top: "200px" }, 250);
-  $(openBtn).show(0);
-  $(closeBtn).hide(0);
+  closeSide();
+  // $(openBtn).show(0);
+  // $(closeBtn).hide(0);
   $("#searchSection").css({ opacity: "1" });
   $(".search-input").css({ display: "flex" });
   $("#rowData").css({ opacity: "0" });
@@ -132,10 +139,7 @@ function dispalySearchLetter(array) {
 
 //  =============> CATEGORY ===============>
 document.getElementById("categoryLink").addEventListener("click", () => {
-  $(".side-bar").animate({ left: "-250px" }, 500);
-  $(".links a").animate({ top: "200px" }, 250);
-  $(openBtn).show(0);
-  $(closeBtn).hide(0);
+  closeSide();
   $("#rowData").css({ opacity: "0" });
   $("#searchSection").css({ opacity: "0" });
   document.getElementById("form").classList.add("d-none");
@@ -198,8 +202,7 @@ function displayCategoryMeals(array) {
 
 // ! =============> DETAILS ===============>
 async function details(itemId) {
-  $(".side-bar").animate({ left: "-250px" }, 500);
-  $(".links a").animate({ top: "200px" }, 250);
+  closeSide();
   $(openBtn).show(0);
   $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
@@ -254,8 +257,7 @@ function displayDetails(array) {
 
 //  =============> AREA ===============>
 document.getElementById("areaLink").addEventListener("click", () => {
-  $(".side-bar").animate({ left: "-250px" }, 500);
-  $(".links a").animate({ top: "200px" }, 250);
+  closeSide();
   $(openBtn).show(0);
   $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
@@ -320,8 +322,7 @@ function displayOnlyAreaMeals(array) {
 
 // ! =============> INGRRDIENT ===============>
 document.getElementById("ingredientLink").addEventListener("click", () => {
-  $(".side-bar").animate({ left: "-250px" }, 500);
-  $(".links a").animate({ top: "200px" }, 250);
+  closeSide();
   $(openBtn).show(0);
   $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
@@ -384,14 +385,11 @@ function displayIngredientsMeals(array) {
 
 //  =============> CONTACT ===============>
 document.getElementById("contactLink").addEventListener("click", () => {
-  $(".side-bar").animate({ left: "-250px" }, 500);
-  $(".links a").animate({ top: "200px" }, 250);
+  closeSide();
   $(openBtn).show(0);
   $(closeBtn).hide(0);
   $("#rowData").css({ opacity: "0" });
   $(".search-input").css({ display: "none" });
-  // $("#form").css({ display: "flex" });
-  // $("#form").css({ opacity: "1" });
   document.getElementById("form").classList.remove("d-none");
   loading.classList.add("d-none");
 });
