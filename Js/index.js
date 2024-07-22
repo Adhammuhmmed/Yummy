@@ -294,7 +294,7 @@ async function areaMeal(area) {
   $("#form").css({ display: "none" });
   loading.classList.remove("d-none");
   const api = await fetch(
-    `https:www.themealdb.com/api/json/v1/1/filter.php?a=${area}`
+    `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`
   );
   const response = await api.json();
   const responseaAreaMeal = response.meals;
